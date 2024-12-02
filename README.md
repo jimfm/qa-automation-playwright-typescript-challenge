@@ -1,6 +1,6 @@
 # QA Automation Playwright TypeScript
 
-## Requirements
+## Coding Challenge Requirements
 
 -   Use Playwright for the project.
 -   Use TypeScript for the project.
@@ -8,6 +8,7 @@
 -   Work out a way to make logins fluid/reusable when testing features on and/or after the login page.
 -   Lead the path on what should be tested and how it should be tested.
 -   There's not a requirement to write tests for all features. The goal is to show the team how you can adapt and create. We'll be checking for best practices generally and how you think when working through new Playwright tests.
+-   Have fun! 🎉
 
 ## Setup
 
@@ -32,9 +33,6 @@ Then use the version of npm specified in terminal output, example:|
 # example only, use output of terminal
 nvm use 20
 ```
-
-For ease of use, install Git bash:
-[https://git-scm.com/download/win](https://git-scm.com/download/win)
 
 Install Playwright dependencies.
 
