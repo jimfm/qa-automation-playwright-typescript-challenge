@@ -10,6 +10,7 @@
 -   Lead the path on what should be tested and how it should be tested.
 -   There's not a requirement to write tests for all features. The goal is to show the team how you can adapt and create. We'll be checking for best practices generally and how you think when working through new Playwright tests.
 -   To complete the challenge, submit a pull request from your fork to this repository, main branch.
+-   You'll have about 3-4 days to show us what you can do! :D (see email for details)
 -   Have fun! 🎉
 
 ## Setup
