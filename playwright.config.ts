@@ -37,6 +37,13 @@ export default defineConfig({
 
         actionTimeout: 120000,
         navigationTimeout: 120000,
+
+        testIdAttribute: 'data-test', // use this instead of the default data-testid
+        
+        screenshot: 'only-on-failure',
+
+        // headless: false,
+
     },
 
     /* Global setup and teardown configuration */
@@ -52,8 +59,13 @@ export default defineConfig({
     projects: [
         {
             name: 'chromium',
-            use: { ...devices['Desktop Chrome'] },
-            testMatch: /.*\.spec\.ts/,
+            // use: { ...devices['Desktop Chrome'] },
+            use: { 
+                ...devices['Desktop Chrome'],
+                launchOptions: {
+                    // slowMo: 1000
+                }
+            },
         },
     ],
 });
