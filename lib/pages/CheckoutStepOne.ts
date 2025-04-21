@@ -19,12 +19,20 @@ export default class CheckoutStepOnePage extends BasePage {
         await this.lastNameField.fill(lastName);
         await this.postalCodeField.fill(postalCode);
     }
-    
-    public async submitForm(): Promise<void> {
-        await this.continueButton.click();
+
+    public async getFirstNameFieldValue(): Promise<string> {
+        return await this.firstNameField.inputValue();  
     }
 
-    public async clickContinueButton(): Promise<void> {
+    public async getLastNameFieldValue(): Promise<string> {
+        return await this.lastNameField.inputValue();  
+    }
+
+    public async getPostalCodeFieldValue(): Promise<string> {
+        return await this.postalCodeField.inputValue();
+    }
+    
+    public async submitForm(): Promise<void> {
         await this.continueButton.click();
     }
 

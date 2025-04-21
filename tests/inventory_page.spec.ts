@@ -2,8 +2,6 @@ import {Page, test, expect} from '@playwright/test';
 import InventoryPage from '../lib/pages/Inventory';
 import { setLoginSession } from '../lib/utils/session';
 import { users } from '../lib/config/credentials';
-import Menu from '../lib/components/menu';
-import { inventory } from '../lib/config/inventory';
 
 const items = [
     'sauce-labs-backpack',
@@ -140,7 +138,26 @@ test.describe('Inventory Page (Add Items)', () => {
         // Check if all items are present in the inventory
         // and match description / price etc. based on the inventory.ts file
         // Unless the inventory is finite, it will not be feasible to check all items
-        // every time.  Test data elsewhere.
+        // every time.  Test data specifics elsewhere.
     });
 });
 
+test.describe('Inventory Page Errors (problem_user)', () => {
+    test.beforeEach(async ({page}) => {
+        await setLoginSession(page, users.problem_user.username, 'www.saucedemo.com');
+    });
+
+    test('add item to cart problem', async ({page}) => {
+        const inventoryPage = new InventoryPage(page);
+        await inventoryPage.visit();
+
+        let itemCount = 1;
+
+        for (const item of items) {
+            await inventoryPage.addItemToCart(item);
+            const cartBadgeCount = await inventoryPage.getCartBadgeCount();
+            expect(cartBadgeCount).toBe(itemCount.toString());
+            itemCount++;
+        };
+    });
+});

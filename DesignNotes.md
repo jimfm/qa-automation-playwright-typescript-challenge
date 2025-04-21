@@ -1,10 +1,14 @@
 Goals:
 
-1. Session login utility to access app without explicitly signing into with username/password.
-2. Page object definition with BasePage. Includes a limited subset of basic functions: visit('url//path')
-3. ChildPages using BasePage class
-4. Tests basic functionality of:
+1. Session cookie login utility to access app without explicitly signing into with username/password.
+2. Page object definition with BasePage. Includes their basic functions.
+3. Tests basic functionality of:
     * Login - Login, Logout, Errors
-    * Catalog - select items, check pricing add/subtract
-    * Checkout fields & submit, errors.
-5. Test error user with same set of tests to uncover bugs.
+    * Inventory - select items, check pricing add/subtract
+    * Cart
+    * Checkout workflow pages fields & submit, errors.
+4. Created error tests to call out the problem errors that could be found using other login users.
+5. Visual tests will turn up UI issues when run. 
+
+## Did not add
+1. Performance testing
