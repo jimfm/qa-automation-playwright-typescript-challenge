@@ -1,6 +1,6 @@
-import BasePage from "./Base";
-
 import { Page } from '@playwright/test';
+
+import BasePage from "./Base";
 
 export default class CheckoutCompletePage extends BasePage {
 

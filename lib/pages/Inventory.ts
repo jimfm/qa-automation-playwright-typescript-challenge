@@ -1,3 +1,5 @@
+import { Page } from "@playwright/test";
+
 import BasePage from "./Base";
 
 export default class InventoryPage extends BasePage {

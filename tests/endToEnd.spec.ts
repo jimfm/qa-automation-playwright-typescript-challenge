@@ -1,15 +1,16 @@
 import { test, expect } from '@playwright/test';
+
+import { setLoginSession } from '../lib/utils/session';
+import { users } from '../lib/config/credentials';
+
 import LoginPage from '../lib/pages/Login';
 import CartPage from "../lib/pages/Cart";
 import InventoryPage from '../lib/pages/Inventory';
 import CheckoutStepOnePage from '../lib/pages/CheckoutStepOne';
 import CheckoutStepTwoPage from '../lib/pages/CheckoutStepTwo';
 import CheckoutCompletePage from '../lib/pages/CheckoutComplete';
-import { setLoginSession } from '../lib/utils/session';
-import { users } from '../lib/config/credentials';
-import { describe } from 'node:test';
 
-describe('End to End Test', () => {
+test.describe('End to End Test', () => {
     let loginPage: LoginPage;
     let inventoryPage: InventoryPage;
     let cartPage: CartPage;

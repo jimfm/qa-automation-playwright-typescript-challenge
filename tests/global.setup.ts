@@ -1,8 +1,6 @@
 import { chromium } from '@playwright/test';
 import dotenv from 'dotenv';
 
-import InventoryPage from '../lib/pages/Inventory';
-
 dotenv.config();
 
 async function globalSetup() {
@@ -11,7 +9,6 @@ async function globalSetup() {
     const context = await browser.newContext({
         ignoreHTTPSErrors: true,
     });
-    // const page = await context.newPage();
 
     try {
 

@@ -42,8 +42,6 @@ export default defineConfig({
         
         screenshot: 'only-on-failure',
 
-        // headless: false,
-
     },
 
     /* Global setup and teardown configuration */
@@ -57,15 +55,8 @@ export default defineConfig({
 
     /* Configure projects for major browsers */
     projects: [
-        {
-            name: 'chromium',
-            // use: { ...devices['Desktop Chrome'] },
-            use: { 
-                ...devices['Desktop Chrome'],
-                launchOptions: {
-                    // slowMo: 1000
-                }
-            },
-        },
+        { name: 'chromium', use: { browserName: 'chromium' } },
+        // { name: 'firefox', use: { browserName: 'firefox' } },
+        // { name: 'webkit', use: { browserName: 'webkit' } },
     ],
 });

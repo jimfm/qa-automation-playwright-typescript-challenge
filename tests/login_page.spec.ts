@@ -1,8 +1,9 @@
 import {test, expect} from '@playwright/test';
-import LoginPage from '../lib/pages/Login';
-import Menu from '../lib/components/menu';
+
 import { users } from '../lib/config/credentials';
 
+import LoginPage from '../lib/pages/Login';
+import Menu from '../lib/components/menu';
 
 test.describe('Login', () => {
     

@@ -1,9 +1,9 @@
 import { test, expect } from '@playwright/test';
-import CartPage from "../lib/pages/Cart";
-import InventoryPage from '../lib/pages/Inventory';
+
 import { setLoginSession } from '../lib/utils/session';
 import { users } from '../lib/config/credentials';
 
+import CartPage from "../lib/pages/Cart";
 
 test.describe('Cart Page', () => {
 
@@ -23,10 +23,8 @@ test.describe('Cart Page', () => {
 
     test('cancel button click', async ({page}) => {
         await cartPage.clickCancelButton();
-
         expect(page.url()).toMatch(/.*inventory\.html/);
     });
-
 });
 
 

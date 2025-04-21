@@ -21,7 +21,7 @@ export default abstract class BasePage {
         return await this.page.getByTestId('title').innerText();
     }
 
-        // This method is used to inject an item into the cart by modifying local storage
+    // This method is used to inject an item into the cart by modifying local storage
     // Only for testing purposes to add an item without going through the UI
     public async injectItemToCart(page: Page, itemNumber: number): Promise<void> {
         await page.evaluate((itemNumber) => {

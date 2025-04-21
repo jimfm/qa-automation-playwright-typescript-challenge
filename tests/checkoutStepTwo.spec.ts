@@ -4,7 +4,6 @@ import CheckoutStepTwoPage from '../lib/pages/CheckoutStepTwo';
 import { setLoginSession } from '../lib/utils/session';
 import { users } from '../lib/config/credentials';
 import { inventory } from '../lib/config/inventory';
-import exp from 'constants';
 
 
 test.describe('Checkout Page 2', () => {
